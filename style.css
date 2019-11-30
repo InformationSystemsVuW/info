@@ -667,13 +667,6 @@ footer {
   position:relative;
   height:0;
 }
-#map2 iframe{
-  left:0;
-  top:0;
-  height:100%;
-  width:100%;
-  position:absolute;
-}
 
 @media screen and (max-width: 600px) {
   .embed-responsive {
@@ -735,4 +728,12 @@ footer {
   height: 70px;
   margin-top: -70px;
   visibility: hidden;
+}
+
+#map2 iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
 }

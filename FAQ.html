@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Info Sys</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="https://kit.fontawesome.com/225910cad6.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="namesCtrl">
+        <nav class="navbar navbar-light bg-light justify-content-between" style="  background: rgba(255, 255, 255, 0.1);">
+            <a class="navbar-brand" href="#" style="color: #00A770;">Information Systems</a>
+            <!-- <form class="form-inline">
+                <input class="form-control mr-sm-2 field" type="search" placeholder="Search" aria-label="Search" ng-model="test">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#exampleModalLong">Search</button>
+            </form> -->
+        </nav>
+
+        <banner banner-model="::vm.metadata">
+            <header class="sector degree-banner banner-with-cover">
+                <div class="cover-holder">
+                    <picture aria-describedby="image-attribution"><img class="cover-pic" id="mainbanner" src="https://www.victoria.ac.nz/__data/assets/image/0018/348300/info-sys-banner.png"></picture>
+                </div>
+                <div class="cover-overlay"></div>
+                <content-switcher>
+                    <div class="centraliser">
+                        <form action="#" method="get" accept-charset="utf-8" class="content-switcher ng-pristine ng-valid">
+                            <div class="group-toggle"><span class="toggle-desc">International information</span>
+                                <a ui-sref=".({ 'international': vm.isInternationalSelected ? undefined : true })" aria-pressed="false" title="Open dialog to switch to information for international students" ng-click="clickToggle( $event )" href="/explore/study-areas/information-systems?international=true">
+                                    <input id="content-toggle" class="toggle ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" hidden="" ng-model="vm.isInternationalSelected" ng-change="vm.showDialog()">
+                                    <label aria-labelledby="toggle-value-label" for="content-toggle" role="presentation"><span></span></label> <span class="aria-only" id="toggle-value-label">OFF</span></a>
+                            </div>
+                        </form>
+                    </div>
+                </content-switcher>
+                <div class="intro">
+                    <div class="title">
+                        <h1>Information Systems<span ng-show="vm.bannerModel.code &amp;&amp; vm.bannerModel.code !== ''" class="ng-hide">&nbsp;–&nbsp;</span></h1></div>
+                    <h3 class="abstract">Learn how to use information technology (IT) to solve business problems, and get the skills to manage information in complex environments.</h3>
+                    <!---->
+                </div>
+                <!---->
+            </header>
+        </banner>
+        <!-- Sticky Nav bar with progress bar -->
+        <div class="sticky">
+            <nav class="shift">
+                <ul>
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="index.html">Career</a></li>
+                    <li><a href="index.html">Course Planner</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+        </div>
+
+        <div class="containerWork">
+            <h1 style="text-align: center">FAQ</h1>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                              <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                INFO Major explanation
+                              </button>
+                            </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>To obtain a BCom (INFO) you will need to complete courses worth a total of at least 360 points. In addition to the Bachelor of Commerce degree requirements set by the Faculty of Commerce, for a major in Information Systems you will need to complete:</p>
+                            <ol>
+                                <li>Three courses at 100 level
+                                    <ol>
+                                        <li>INFO 101- Introduction to Information Systems</li>
+                                        <li>INFO 141 – Systems Analysis</li>
+                                        <li>INFO 151 – Database</li>
+                                    </ol>
+                                </li>
+                                <li>Three courses from INFO 200-299</li>
+                                <li>Three courses at 300 level
+                                    <ol>
+                                        <li>Capstone course; either INFO 320 – Project in Information Systems or INFO 395 Case Studies in Information Systems</li>
+                                        <li>Two further courses from INFO 300-399</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                              <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Minor explanation
+                              </button>
+                            </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>To obtain a BCom (INFO) you will need to complete courses worth a total of at least 360 points. In addition to the Bachelor of Commerce degree requirements set by the Faculty of Commerce, for a major in Information Systems you will need to complete:</p>
+                            <ol>
+                                <li>Three courses at 100 level
+                                    <ol>
+                                        <li>INFO 101- Introduction to Information Systems</li>
+                                        <li>INFO 141 – Systems Analysis</li>
+                                        <li>INFO 151 – Database</li>
+                                    </ol>
+                                </li>
+                                <li>Three courses from INFO 200-299</li>
+                                <li>Three courses at 300 level
+                                    <ol>
+                                        <li>Capstone course; either INFO 320 – Project in Information Systems or INFO 395 Case Studies in Information Systems</li>
+                                        <li>Two further courses from INFO 300-399</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                              <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Specialisation Explanation
+                              </button>
+                            </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>If you are majoring in Information Systems you have the option of also selecting a specialisation in IT Solutions or Business Analysis. Getting this specialisation will allow you to become an expert in a particular set of skills.</p>
+                            <img src="images/BA IS papers.PNG" class="img-fluid rounded mx-auto d-block" alt="Responsive image" style="max-width: 800px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingfour">
+                        <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                            IT Solution specialisation
+                                    </button>
+                                  </h2>
+                    </div>
+                    <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ol type="a">
+                                <li>Through this specialisation you will thrive in a digital business environment – putting together digital solutions that add value to users and organisations.</li>
+                                <li>Potential career opportunities include system analyst, IT architect, user experience designer, IT architect, user experience designer, application designer and many more.</li>
+                                <li>To obtain this specialisation you must include the following six courses in meeting the 200 and 300 level major requirements:
+                                    <ol type="i">
+                                        <li>INFO 226 – Application Development</li>
+                                        <li>INFO 231 – Management of IT Projects</li>
+                                        <li>INFO 246 – User Experience Design</li>
+                                        <li>INFO 320 – Project in Information System</li>
+                                        <li>Two further courses from:
+                                            <ol type="1">
+                                                <li>INFO 354 – Digital Strategy</li>
+                                                <li>INFO 376 – Enterprise Architecture</li>
+                                                <li>INFO 377 – System Verification</li>
+                                                <li>INFO 386 – Information Technology Architecture</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingfive">
+                        <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                                Business Analysis specialisation
+                                        </button>
+                                      </h2>
+                    </div>
+                    <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ol type="a">
+                                <dd>
+                                    <li>Through this specialisation you will learn how to develop skills in problem analysis and design thinking and become an innovative and insightful leader who can make digital future better.</li>
+                                </dd>
+                                <li>Potential career opportunities include enterprise architect, IT business analyst, security analysis, IT manager and many more.</li>
+                                <li>To obtain this specialisation you must include the following six courses in meeting the 200 and 300 level major requirements:
+                                    <ol type="i">
+                                        <li>INFO 231 – Management of IT Projects</li>
+                                        <li>INFO 234 – Business Process Design</li>
+                                        <li>INFO 264 – Business Analytics</li>
+                                        <li>INFO 395 – Case Studies in Information Systems</li>
+                                        <li>Two further courses from:
+                                            <ol type="1">
+                                                <li>INFO 334 – Digital Business Innovation</li>
+                                                <li>INFO 354 – Digital Strategy</li>
+                                                <li>INFO 376 – Enterprise Architecture</li>
+                                                <li>INFO 388 – Enterprise Security</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingsix">
+                        <h2 class="mb-0">
+                                            <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                                                    What majors could you do with INFO
+                                            </button>
+                                          </h2>
+                    </div>
+                    <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>When completing a Bachelor of Commerce degree students can choose more than one major and minor. Popular majors and minors alongside INFO are:</p>
+                            <ul>
+                                <li>
+                                    <h4>Management</h4>
+                                    <ul>
+                                        <li>Studying management alongside Information Systems gives students a broad knowledge of the skills required by managers in both the commercial and public sector, through industry relevant case studies and projects. Doing management and Information Systems will allow you to develop the strengths required for IT management roles in the future.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Human Resources</h4>
+                                    <ul>
+                                        <li>Studying marketing and information systems together will allow students to gain insight into how companies use branding, slogans and advertising to sell products. Doing this alongside information systems will give you a great understanding of what sort of technology companies use and what they could use in the future. Jobs you could go into include marketing analytics, product marketing, IT communication and software administration.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Management</h4>
+                                    <ul>
+                                        <li>Studying Human Resources and Information Systems together will allow students to apply their learning in both fields, particularly looking forward to the future of work as IT has an ever increasing influence on Human Resource management in terms of planning and management, recruitment, training and development and maintenance functions.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Accounting</h4>
+                                    <ul>
+                                        <li>Studying Accounting and Information Systems together will allow accountants to greater understand the systems and process they are using when doing their everyday work, and how they can make process changes through technology to make efficient and effective accounting decisions.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1>General FAQ</h1>
+            <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne1">
+                            <h2 class="mb-0">
+                                  <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                    INFO Major explanation
+                                  </button>
+                                </h2>
+                        </div>
+    
+                        <div id="collapseOn1e" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>To obtain a BCom (INFO) you will need to complete courses worth a total of at least 360 points. In addition to the Bachelor of Commerce degree requirements set by the Faculty of Commerce, for a major in Information Systems you will need to complete:</p>
+                                <ol>
+                                    <li>Three courses at 100 level
+                                        <ol>
+                                            <li>INFO 101- Introduction to Information Systems</li>
+                                            <li>INFO 141 – Systems Analysis</li>
+                                            <li>INFO 151 – Database</li>
+                                        </ol>
+                                    </li>
+                                    <li>Three courses from INFO 200-299</li>
+                                    <li>Three courses at 300 level
+                                        <ol>
+                                            <li>Capstone course; either INFO 320 – Project in Information Systems or INFO 395 Case Studies in Information Systems</li>
+                                            <li>Two further courses from INFO 300-399</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                  <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Minor explanation
+                                  </button>
+                                </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>To obtain a BCom (INFO) you will need to complete courses worth a total of at least 360 points. In addition to the Bachelor of Commerce degree requirements set by the Faculty of Commerce, for a major in Information Systems you will need to complete:</p>
+                                <ol>
+                                    <li>Three courses at 100 level
+                                        <ol>
+                                            <li>INFO 101- Introduction to Information Systems</li>
+                                            <li>INFO 141 – Systems Analysis</li>
+                                            <li>INFO 151 – Database</li>
+                                        </ol>
+                                    </li>
+                                    <li>Three courses from INFO 200-299</li>
+                                    <li>Three courses at 300 level
+                                        <ol>
+                                            <li>Capstone course; either INFO 320 – Project in Information Systems or INFO 395 Case Studies in Information Systems</li>
+                                            <li>Two further courses from INFO 300-399</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                  <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Specialisation Explanation
+                                  </button>
+                                </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>If you are majoring in Information Systems you have the option of also selecting a specialisation in IT Solutions or Business Analysis. Getting this specialisation will allow you to become an expert in a particular set of skills.</p>
+                                <img src="images/BA IS papers.PNG" class="img-fluid rounded mx-auto d-block" alt="Responsive image" style="max-width: 800px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingfour">
+                            <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                                IT Solution specialisation
+                                        </button>
+                                      </h2>
+                        </div>
+                        <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <ol type="a">
+                                    <li>Through this specialisation you will thrive in a digital business environment – putting together digital solutions that add value to users and organisations.</li>
+                                    <li>Potential career opportunities include system analyst, IT architect, user experience designer, IT architect, user experience designer, application designer and many more.</li>
+                                    <li>To obtain this specialisation you must include the following six courses in meeting the 200 and 300 level major requirements:
+                                        <ol type="i">
+                                            <li>INFO 226 – Application Development</li>
+                                            <li>INFO 231 – Management of IT Projects</li>
+                                            <li>INFO 246 – User Experience Design</li>
+                                            <li>INFO 320 – Project in Information System</li>
+                                            <li>Two further courses from:
+                                                <ol type="1">
+                                                    <li>INFO 354 – Digital Strategy</li>
+                                                    <li>INFO 376 – Enterprise Architecture</li>
+                                                    <li>INFO 377 – System Verification</li>
+                                                    <li>INFO 386 – Information Technology Architecture</li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingfive">
+                            <h2 class="mb-0">
+                                            <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                                    Business Analysis specialisation
+                                            </button>
+                                          </h2>
+                        </div>
+                        <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <ol type="a">
+                                    <dd>
+                                        <li>Through this specialisation you will learn how to develop skills in problem analysis and design thinking and become an innovative and insightful leader who can make digital future better.</li>
+                                    </dd>
+                                    <li>Potential career opportunities include enterprise architect, IT business analyst, security analysis, IT manager and many more.</li>
+                                    <li>To obtain this specialisation you must include the following six courses in meeting the 200 and 300 level major requirements:
+                                        <ol type="i">
+                                            <li>INFO 231 – Management of IT Projects</li>
+                                            <li>INFO 234 – Business Process Design</li>
+                                            <li>INFO 264 – Business Analytics</li>
+                                            <li>INFO 395 – Case Studies in Information Systems</li>
+                                            <li>Two further courses from:
+                                                <ol type="1">
+                                                    <li>INFO 334 – Digital Business Innovation</li>
+                                                    <li>INFO 354 – Digital Strategy</li>
+                                                    <li>INFO 376 – Enterprise Architecture</li>
+                                                    <li>INFO 388 – Enterprise Security</li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingsix">
+                            <h2 class="mb-0">
+                                                <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                                                        What majors could you do with INFO
+                                                </button>
+                                              </h2>
+                        </div>
+                        <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>When completing a Bachelor of Commerce degree students can choose more than one major and minor. Popular majors and minors alongside INFO are:</p>
+                                <ul>
+                                    <li>
+                                        <h4>Management</h4>
+                                        <ul>
+                                            <li>Studying management alongside Information Systems gives students a broad knowledge of the skills required by managers in both the commercial and public sector, through industry relevant case studies and projects. Doing management and Information Systems will allow you to develop the strengths required for IT management roles in the future.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h4>Human Resources</h4>
+                                        <ul>
+                                            <li>Studying marketing and information systems together will allow students to gain insight into how companies use branding, slogans and advertising to sell products. Doing this alongside information systems will give you a great understanding of what sort of technology companies use and what they could use in the future. Jobs you could go into include marketing analytics, product marketing, IT communication and software administration.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h4>Management</h4>
+                                        <ul>
+                                            <li>Studying Human Resources and Information Systems together will allow students to apply their learning in both fields, particularly looking forward to the future of work as IT has an ever increasing influence on Human Resource management in terms of planning and management, recruitment, training and development and maintenance functions.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h4>Accounting</h4>
+                                        <ul>
+                                            <li>Studying Accounting and Information Systems together will allow accountants to greater understand the systems and process they are using when doing their everyday work, and how they can make process changes through technology to make efficient and effective accounting decisions.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div>
+                <div id="main" class="container clear-top">
+                </div>a
+                <footer class="footer"></footer>
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                <script src="js1.js"></script>
+                <script src='javascript.js'></script>
+</body>
+
+</html>

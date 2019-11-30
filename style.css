@@ -1,0 +1,713 @@
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+  display: none !important;
+}
+
+* {
+  margin: 0;
+  /* padding: 0; */
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+.btn-link {
+  color: #64a659;
+}
+
+.text-green{
+  color: #64a659;
+}
+
+.banner-with-cover .title h1,
+.banner-with-cover .title h2 {
+  margin: 0;
+  color: inherit;
+  /* text-align: center; */
+}
+
+
+/* =============== Stick scroll progress ===============*/
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  /* max-width: 1200px; */
+  z-index: 1;
+  border-radius: 15px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* postions of bar*/
+.progress-container {
+  top: calc((2.4vw + 26px));
+  width: 100%;
+  position: absolute;
+  background: #ccc;
+}
+
+.progress-bar1 {
+  height: 4px;
+  background: rgba(68, 159, 55, 0.75);
+  width: 0%;
+}
+
+/* nav bar for project*/
+
+nav {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  padding-inline-start: 0;
+  font-size: calc(0.8vw + 8px);
+}
+
+nav ul li {
+  display: inline-block;
+  width: calc(24% - (0.8vw + 4px));
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: rgba(68, 159, 55, 0.75);
+  text-transform: uppercase;
+  padding: calc(0.8vw + 4px);
+  /* margin: 3px 1.5vw; */
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+
+nav ul li a:hover {
+  color: #555;
+}
+
+nav.shift ul li a {
+  position: relative;
+  z-index: 1;
+}
+
+nav.shift ul li a:hover {
+  color: white;
+}
+
+nav.shift ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* margin: auto; */
+  width: 100%;
+  height: 1px;
+  content: ".";
+  color: transparent;
+  background: rgba(68, 159, 55, 0.75);
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+}
+
+nav.shift ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+h3 {
+  font-size: 1.44em;
+}
+
+
+@media screen and (max-width: 45em) {
+  .banner-with-cover .abstract {
+    margin: 0;
+    font-size: calc(1.5vw + 10px);
+  }
+  h1 {
+    font-size: calc(2vw + 15px);
+  }
+}
+
+@media screen and (max-width: 60em) and (min-width: 45em) {
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+.banner-with-cover {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+}
+.banner-with-cover .cover-pic {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  min-height: 100%;
+  min-width: 1200px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .banner-with-cover .cover-pic {
+    left: 50%;
+    margin-left: -600px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 0.6em;
+  color: #434343;
+  /* font-family: National; */
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.0736em;
+  text-align: center;
+  color: #64a659;
+}
+
+
+h4{
+  color: #64a659;
+}
+
+.banner-with-cover .title {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  margin-top: 0.75em;
+  margin-bottom: 1.2em;
+  color: #fff;
+  background-color: rgba(68, 159, 55, 0.75);
+}
+
+.banner-with-cover .abstract {
+  color: #fff;
+  padding: 0.6em 0.9em;
+  background-color: rgba(68, 159, 55, 0.75);
+}
+
+.banner-with-cover .intro {
+  z-index: 1;
+  max-width: 990px;
+  position: relative;
+  padding: 1.8em 3.2rem;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto 0.25em;
+}
+
+.banner-with-cover .title h1,
+.banner-with-cover .title h2 {
+  margin: 0;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
+  font-size: 1.125rem;
+  /* font-family: "Helvetica","Segoe WP","Nimbus Sans L",Helvetica,Arial; */
+  line-height: 1.6;
+  color: #424242;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 10px;
+  margin-left: 5px;
+}
+
+.titlecourse {
+  color: #434343;
+}
+
+.badge {
+  margin-left: 2px;
+  /* font-size: 60%; */
+}
+
+.card-title {
+  margin-bottom: 0;
+}
+
+.comment {
+  margin: 0px;
+}
+a.morelink {
+  text-decoration: none;
+  outline: none;
+}
+.morecontent span {
+  display: none;
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.optcard{
+  text-align: center;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 150px; /* this needs to be bigger than footer height*/
+}
+
+
+.wrapper {
+  margin: auto;
+  max-width: 400px;
+}
+
+
+.courseplanner-section {
+  width: 100%;
+  min-height: 400px;
+  background-color: aquamarine;
+  border-radius: 25px;
+}
+
+/* Style the form */
+#regForm {
+  /* background-color: #ffffff; */
+  margin: 20px auto;
+  width: 70%;
+  min-width: 300px;
+}
+
+/* Style the input fields */
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4caf50;
+}
+
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  /* height: 300px; Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .column2 {
+    width: 100%;
+  }
+}
+
+
+label {
+  width: 100%;
+}
+
+.card-input-element {
+  display: none;
+}
+
+.card-input {
+  margin: 10px;
+  padding: 00px;
+}
+
+.card-input:hover {
+  cursor: pointer;
+}
+
+.card-input-element:checked + .card-input {
+   box-shadow: 0 0 1px 1px #2ecc71;
+}
+
+.btn{
+  border-radius: 20px;
+}
+
+.btn-space {
+  margin: 3px;
+}
+
+.margintext{
+  margin: 20px;
+}
+
+.dp1{
+  width:96%;
+  margin: 2%;
+  border-radius: 50%;
+}
+
+.card-title{
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 770px) {
+  .narrow{
+    margin: 0 auto;
+    width: 80%;
+  }
+  .card-text{
+    font-size: 16px;
+  }
+  .dp1{
+    width:80%;
+    margin: 2% 10%;
+    border-radius: 50%;
+  }
+  #dpmargin{
+    display: none;
+  }
+}
+
+.carousel-indicators li {
+  background-color: #2ecc71;
+}
+
+h4{
+  margin: 0;
+}
+/*---------------------------- projects overview -------------------------------*/
+card {
+  font-size: 1.6em;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #64a659;
+}
+
+a:hover {
+  color:#64a659;
+  text-decoration: none;
+}
+
+.border-tlr-radius {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.radius {
+  border-radius: 10px;
+}
+
+.shadowDepth0 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.shadowDepth1 {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12), 0 2px 3px rgba(0, 0, 0, 0.24);
+}
+
+.shadowDepth1:hover {
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5), 0 1px 6px rgba(0, 0, 0, 0.5);
+  background-color: rgba(68, 159, 55, 0.1);
+}
+
+.sub_title {
+  margin: 0;
+  padding: 0 0 20px;
+  color: #64a659;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.card__padding {
+  padding: 1.6rem;
+}
+
+.card__image {
+  min-height: 100px;
+}
+
+.card__image img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.card__meta {
+  background: rgba(0, 0, 0, 0.6);
+  top: -30px;
+  position: relative;
+  padding: .1em 0em;
+  color: white;
+}
+
+/* card meta */
+.card__meta time {
+  font-size: 1rem;
+  margin-left: 0.8rem;
+}
+
+.card__meta a {
+  color: white;
+  padding: .4em 0em.4em 1.6em;
+  font-size: 1.2rem;
+}
+
+.card__meta a:hover {
+  color: #64a659;
+}
+
+/* card article */
+.card__article {
+  color: #64a659;
+  top: -30px;
+  position: relative;
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s ease;
+  height: 200px;
+}
+
+/* card action */
+.card__action {
+  padding: 1.6rem;
+}
+
+.card__share {
+  float: right;
+  position: relative;
+  margin-top: -78px;
+}
+
+.share-toggle:before {
+  content: "\f061";
+  font-size: 25px;
+  font-family: 'FontAwesome';
+  color: #64a659;
+}
+
+.share-toggle:hover {
+  -webkit-transform: rotateZ(720deg);
+  -moz-transform: rotateZ(720deg);
+  transform: rotateZ(720deg);
+  -webkit-transition: 0.6s ease-out;
+  -moz-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+}
+
+.share-icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 0.3s ease;
+  outline: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+/*-----------------------------------------------------------*/
+.wrapper {
+  margin: auto;
+  max-width: 400px;
+}
+
+.parent {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 0 0 -0.5rem;
+  /* offset margin to the left and avoid horizontal scrollbar*/
+}
+
+.child {
+  flex: 1 0 20%;
+  /* less than 25% but more 0rr equal to 20% to account for margins - when 4 across is required */
+  /* min-width on flex items not working in ios so use media queries instead*/
+  min-width: 350px;
+  margin: .2rem 5px;
+}
+
+/* example 2 - 3 across*/
+.parent2 .child {
+  flex: 1 0 25%;
+}
+
+/* less than 33% but more than or equal to 25%*/
+.containerWork {
+  margin: 1.5em auto;
+  max-width: 1200px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+/*-------------------------------------------------------------------*/
+
+footer {
+  background-color: #424242;
+  /* padding: 10px; */
+  padding-top: 20px;
+  color: white;
+}
+
+
+.hidefooter {
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  .hidefooter {
+    display: none;
+  }
+}
+
+#map2{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+#map2 iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+@media screen and (max-width: 600px) {
+  .iframecontainer, .serachfield {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #buttonlink {
+    display: none;
+  }
+}
+
+
+.iframecontainer {
+  border-radius: 20px;
+  overflow: hidden;
+  /* // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625) */
+  padding-top: 56.25%;
+  position: relative;
+}
+ 
+.iframecontainer iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+.anchor {
+  display: block;
+  height: 70px;
+  margin-top: -70px;
+  visibility: hidden;
+}

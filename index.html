@@ -1,0 +1,1428 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Information Systems VuW</title>
+      <link rel="icon" href="https://static.victoria.ac.nz/images/favicon-32x32.png">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+      <script src="https://kit.fontawesome.com/225910cad6.js"></script>
+   </head>
+   <body>
+      <!-- controller for angular -->
+      <div ng-app="myApp" ng-controller="namesCtrl">
+         <!-- Nav Bar  -->
+      <nav class="navbar navbar-light bg-light justify-content-between" style="  background: rgba(255, 255, 255, 0.1);">
+         <a class="navbar-brand" href="#" style="color: #00A770;">Information Systems</a>
+         <form class="form-inline">
+            <!-- Serach Bar -->
+            <input class="form-control mr-sm-2 field serachfield" type="search" placeholder="Search" aria-label="Search" ng-model="test" >
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#exampleModalLong">Search</button>
+         </form>
+      </nav>
+    <!-- banner -->
+      <banner banner-model="::vm.metadata">
+         <header class="sector degree-banner banner-with-cover">
+            <div class="cover-holder">
+               <picture aria-describedby="image-attribution"><img class="cover-pic" id="mainbanner" src="https://www.victoria.ac.nz/__data/assets/image/0018/348300/info-sys-banner.png"></picture>
+            </div>
+            <div class="cover-overlay"></div>
+            <content-switcher>
+               <div class="centraliser">
+                  <form action="#" method="get" accept-charset="utf-8" class="content-switcher ng-pristine ng-valid">
+                     <div class="group-toggle"><span class="toggle-desc">International information</span>
+                        <a ui-sref=".({ 'international': vm.isInternationalSelected ? undefined : true })" aria-pressed="false" title="Open dialog to switch to information for international students" ng-click="clickToggle( $event )" href="/explore/study-areas/information-systems?international=true">
+                        <input id="content-toggle" class="toggle ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" hidden="" ng-model="vm.isInternationalSelected" ng-change="vm.showDialog()">
+                        <label aria-labelledby="toggle-value-label" for="content-toggle" role="presentation"><span></span></label> <span class="aria-only" id="toggle-value-label">OFF</span></a>
+                     </div>
+                  </form>
+               </div>
+            </content-switcher>
+            <div class="intro">
+               <div class="title">
+                  <h1>Information Systems<span ng-show="vm.bannerModel.code &amp;&amp; vm.bannerModel.code !== ''" class="ng-hide">&nbsp;–&nbsp;</span></h1>
+               </div>
+               <h3 class="abstract">Learn how to use information technology (IT) to solve business problems, and get the skills to manage information in complex environments.</h3>
+               <!---->
+            </div>
+            <!---->
+         </header>
+      </banner>
+      <!-- Sticky Nav bar with progress bar -->
+      <div class="sticky">
+         <nav class="shift">
+            <ul>
+               <li><a href="#">Overview</a></li>
+               <li><a href="#Career">Career</a></li>
+               <li><a href="#Planner">Course Planner</a></li>
+               <li><a href="#FAQ">FAQ</a></li>
+            </ul>
+         </nav>
+         <div class="progress-container">
+            <div class="progress-bar1" id="myBar"></div>
+         </div>
+      </div>
+      <!-- Container Center content -->
+      <div class="containerWork">
+         <div class="margintext">
+            <h1>What is INFO?</h1>
+            <!-- <p>Sample text...</p> -->
+            <h2>About the School of Information System.</h2>
+            <p>The School of Information Management at Victoria University of Wellington offers a Bachelor of Commerce degree with an Information Systems major, BCom (INFO). Information Systems (IS) is the academic discipline that investigates how people and organisations use information and how IS and technology affect people, organisations and society, Information is a crucial resource and how we manage it affects every part of of life so come learn how to use information technology (IT) to solve business, organisation and societal problems and get the skills to manage information, technology and people in complex environments</p>
+            <h6>What is a degree?</h6>
+            <p>Undergraduate degrees are also known as Bachelor’s degrees and take three or four years of full-time study to complete.</p>
+            <h6>What does a degree typical require?</h6>
+            <ul>
+               <li>Major in at least one subject (this is the main subject you’ll focus on; e.g. Information Systems), and</li>
+               <li>Complete 360 points worth of courses (around 120 points each year).</li>
+            </ul>
+            <h6>What is a major require?</h6>
+            <p>Majors are the main subject(s) you’ll focus on throughout your degree. For example, you can take a Bachelor of Commerce (BCom) with a major in Information System.</p>
+            <h6>Other alternatives to study information Systems</h6>
+            <B>Minor explanation</B>
+            <p>To obtain a minor in Information Systems you will need to complete:</p>
+            <ol>
+            <li>INFO 101</li>
+            <li>Three course from INFO 200-299</li>
+            <li>One course at 300 level</li>   
+         </ol>
+
+            <h6>What is Specialisation and why consider it?</h6>
+         </div>
+         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <!-- ------------------------------------ carousel --------------------------------------->
+            <div class="narrow">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="card mb-3" style="max-width: 100%;">
+                        <div class="row no-gutters">
+                           <div class="col-md-3">
+                              <div id="dpmargin">
+                                 <br>
+                              </div>
+                              <img src="images/Screenshot (30).png" class="card-img dp1" alt="...">
+                           </div>
+                           <div class="col-md-9">
+                              <div class="card-body">
+                                 <h5 class="card-title"><i>Claudia Sullivan,</i> Current student </h5>
+                                 <p class="card-text">I’m from Christchurch initially, but I love Wellington! It’s a fun and vibrant city that has the perfect balance between student and corporate life. After having looked into the business schools around the country, I decided Victoria offered a degree and a culture which aligned most with me. </p>
+                                 <p class="card-text">Initially, I had intentions to complete my degree with a Marketing and Management major, but since taking INFO101, I decided that Information Systems was better suited to me. Every paper since has solidified that interest.</p>
+                                 <p class="card-text"><i>My advice to prospective students would be:</i> Don’t knock it ‘til you try it! Even if you don’t love INFO101 like I loved it, the 200 and 300-level papers is when your INFO degree becomes an exciting and interesting journey.</p>
+                                 <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="card mb-3" style="max-width: 100%;">
+                        <div class="row no-gutters">
+                           <div class="col-md-3">
+                              <div id="dpmargin">
+                                 <br>
+                              </div>
+                              <img src="images/manraj1.png" class="card-img dp1" alt="...">
+                           </div>
+                           <div class="col-md-9">
+                              <div class="card-body">
+                                 <h5 class="card-title"><i>Manraj Rahi,</i> Current student </h5>
+                                 <p class="card-text">What attracted me to studying IS was the belief that this major provides a future-focused education and an understanding of business and the commercial world. I also felt it would complement my law degree with a unique set of skills through a different learning area.</p>
+                                 <p class="card-text">Choosing my favourite paper is tricky. INFO141 was the paper where I felt I gained an appreciation of what a Business Analyst would do and the practical skills required - I found this really valuable. In general, I’ve thoroughly enjoyed the practical elements of the program; actually being given a chance to apply the skills you learn in lectures meant the INFO degree has lived up to - and exceeded - expectations. </p>
+                                 <p class="card-text"><i>My advice to prospective students would be:</i> Make the most of it! Fully engage in your workshops and tutorials and all of the opportunities INFO gives you, to connect your degree to the real world.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="card mb-3" style="max-width: 100%;">
+                        <div class="row no-gutters">
+                           <div class="col-md-3">
+                              <div id="dpmargin">
+                                 <br>
+                              </div>
+                              <img src="images/patrick1.png" class="card-img dp1" alt="...">
+                           </div>
+                           <div class="col-md-9">
+                              <div class="card-body">
+                                 <h5 class="card-title"><i>Patrick Miller,</i> Graduate</h5>
+                                 <p class="card-text">INFO101 was when I was first introduced to Information Systems, and after completing the website project, which was something completely different to any other assignments I had to do in my first year, I knew that I wanted to pursue INFO as a major. I decided to study INFO for another three years because each course I took was more and more varied than the last. </p>
+                                 <p class="card-text">It’s tough to say what my favourite course would have been - all of the 200 level INFO papers were amazing. INFO226 holds a special place in my heart because after studying it, I came back to tutor it the following year. It’s one of those courses that you get out what you put in. If you enjoy complex problem solving and the thrill of finally getting something to work after trying and trying, then this is the course for you. Extremely rewarding. </p>
+                                 <!-- <p class="card-text"><i>My advice to prospective students would be:</i> Do it. 100% do it. You will never regret the decision to study INFO. The lecturers and support staff are really lovely and helpful, most importantly the content is relevant and gives you a good understanding to grow from in whatever career you end up pursuing.</p> -->
+                                 <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+         </div>
+         <!-- ------------------------------------------- carousel ends ----------------------------------------------- -->
+         <br>
+         <!-- info personas -->
+         <div class="row">
+            <div class="column2" >
+               <div class="card shadowDepth mb-3" style="width: 100%;" onclick="myundergrad()">
+                  <img class="card-img-top" src="images/INFO 320.jpg" alt="Card image cap" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                  <div class="card-footer">
+                     <small>
+                        <h3 class="optcard">Interest in IS</h3>
+                     </small>
+                  </div>
+               </div>
+            </div>
+            <div class="column2" >
+               <div class="card shadowDepth mb-3" style="width: 100%;" onclick="postgrad()">
+                  <img class="card-img-top" src="images/INFO 391.jpg" alt="Card image cap" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                  <div class="card-footer">
+                     <small>
+                        <h3 class="optcard">Current Student</h3>
+                     </small>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- info courses -->
+         <div class="containerWork">
+            <h1>Information Systems Courses</h1>
+            <div class="accordion" id="accordionExample2">
+               <div class="card">
+                  <div class="card-header" id="headingOne1">
+                     <h2 class="mb-0">
+                        <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                           <h4>100 Level Courses</h4>
+                        </button>
+                     </h2>
+                  </div>
+                  <div id="collapseOne1" class="collapse show" aria-labelledby="headingOne1" data-parent="#accordionExample2">
+                     <div class="card-body">
+                        <!-- <h3>100 level</h3> -->
+                        <div class="parent parent2">
+                           <div class="child" ng-repeat="b in courseshort | filter : {'level' : 100}">
+                              <div class="wrapper">
+                                 <div class="card border-{{b.bcolor}} col-md-12 col-sm" ng-click="setSelected(b)" data-toggle="modal" data-target="#coursepopup" id="co">
+                                    <table>
+                                       <tr>
+                                          <td style="transform: rotate(0);">
+                                             <a href="{{ b.url }}" target="_blank" class="titlecourse"><img ng-src="{{b.icon}}" class="card-img icon" alt="..."></a>
+                                          </td>
+                                          <td style="width: 95%">
+                                             <h5 class="card-title" style="transform: rotate(0);">
+                                                <a href="{{ b.url }}" target="_blank" class="titlecourse">{{ b.course + ": " + b.courseName }}</a>
+                                             </h5>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                       </tr>
+                                    </table>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header" id="headingTwo1">
+                     <h2 class="mb-0">
+                        <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                           <h4>200 Level Courses</h4>
+                        </button>
+                     </h2>
+                  </div>
+                  <div id="collapseTwo1" class="collapse" aria-labelledby="headingTwo1" data-parent="#accordionExample2">
+                     <div class="card-body">
+                        <!-- <h5>200 level</h5> -->
+                        <div class="parent parent2">
+                           <div class="child" ng-repeat="b in courseshort | filter : {'level' : 200}">
+                              <div class="wrapper">
+                                 <div class="card border-{{b.bcolor}} col-md-12 col-sm" ng-click="setSelected(b)" data-toggle="modal" data-target="#coursepopup" id="co">
+                                    <table>
+                                       <tr>
+                                          <td style="transform: rotate(0);">
+                                             <a href="{{ b.url }}" target="_blank" class="titlecourse"><img ng-src="{{b.icon}}" class="card-img icon" alt="..."></a>
+                                          </td>
+                                          <td style="width: 95%">
+                                             <h5 class="card-title" style="transform: rotate(0);">
+                                                <a href="{{ b.url }}" target="_blank" class="titlecourse">{{ b.course + ": " + b.courseName }}</a>
+                                             </h5>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                       </tr>
+                                    </table>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header" id="headingThree1">
+                     <h2 class="mb-0">
+                        <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                           <h4>300 Level Courses</h4>
+                        </button>
+                     </h2>
+                  </div>
+                  <div id="collapseThree1" class="collapse" aria-labelledby="headingThree1" data-parent="#accordionExample2">
+                     <div class="card-body">
+                        <!-- <h5>300 level</h5> -->
+                        <div class="parent parent2">
+                           <div class="child" ng-repeat="b in courseshort | filter : {'level' : 300, 'is' : '!' + 'BA Capstone'}">
+                              <div class="wrapper">
+                                 <div class="card border-{{b.bcolor}} col-md-12 col-sm" ng-click="setSelected(b)" data-toggle="modal" data-target="#coursepopup" id="co">
+                                    <table>
+                                       <tr>
+                                          <td style="transform: rotate(0);">
+                                             <a href="{{ b.url }}" target="_blank" class="titlecourse"><img ng-src="{{b.icon}}" class="card-img icon" alt="..."></a>
+                                          </td>
+                                          <td style="width: 95%">
+                                             <h5 class="card-title" style="transform: rotate(0);">
+                                                <a href="{{ b.url }}" target="_blank" class="titlecourse">{{ b.course + ": " + b.courseName }}</a>
+                                             </h5>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                       </tr>
+                                    </table>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header" id="headingsix1">
+                     <h2 class="mb-0">
+                        <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapsesix1" aria-expanded="false" aria-controls="collapsesix1">
+                           <h4>300 Level Capstone Courses</h4>
+                        </button>
+                     </h2>
+                  </div>
+                  <div id="collapsesix1" class="collapse" aria-labelledby="headingsix1" data-parent="#accordionExample2">
+                     <div class="card-body">
+                        <!-- <h5>300 level Capstone</h5> -->
+                        <div class="parent parent2">
+                           <div class="child" ng-repeat="b in courseshort | filter : {'level' : 300, 'is' : 'BA Capstone'}">
+                              <div class="wrapper">
+                                 <div class="card border-{{b.bcolor}} col-md-12 col-sm" ng-click="setSelected(b)" data-toggle="modal" data-target="#coursepopup" id="co">
+                                    <table>
+                                       <tr>
+                                          <td style="transform: rotate(0);">
+                                             <a href="{{ b.url }}" target="_blank" class="titlecourse"><img ng-src="{{b.icon}}" class="card-img icon" alt="..."></a>
+                                          </td>
+                                          <td style="width: 95%">
+                                             <h5 class="card-title" style="transform: rotate(0);">
+                                                <a href="{{ b.url }}" target="_blank" class="titlecourse">{{ b.course + ": " + b.courseName }}</a>
+                                             </h5>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                       </tr>
+                                    </table>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <br>
+            <!-- key -->
+            <p class="text-center"><b>Key:</b>
+                        <span class="text-success"> | Courses for both BA and IT Specialisation | </span>
+                           <span class="text-warning"> | Courses for BA Specialisation | </span>
+                           <span class="text-primary"> | Courses for IT Specialisation | </span>
+                           <span class="text-secondary"> | Optional 300 level courses | </span>
+                        </P>
+                        <br>
+
+            <div class="iframecontainer">
+               <iframe src="http://careerquiz.sim.vuw.ac.nz"></iframe>
+            </div>
+
+            <div class="text-center" id="buttonlink">
+               <img src="images/sim careers quiz.PNG" class="img-fluid"  style="border-radius: 20px;">
+               <br><br>
+               <button type="button" class="btn btn-primary" onclick="mylink()">Take Career Quiz</button>
+            </div>
+            <br>
+            <span class="anchor" id="Career"></span>
+            <h1>Career</h1>
+            <div class="containerWork">
+               <div class="parent parent2">
+                  <div class="child" ng-repeat="c in jobs | filter:test1" ng-click="myFunction2( c.Job ) id="co">
+                     <div class="wrapper">
+                        <div class="card border-{{c.bcolor}} col-md-12 col-sm" ng-click="setSelectedjob(c)" data-toggle="modal" data-target="#jobpopup" id="co">
+                           <table>
+                              <tr>
+                                 <td rowspan="2" style="transform: rotate(0);">
+                                    <a href="" target="_blank" class="titlecourse"><img ng-src="{{c.icon}}" class="card-img icon" alt="..."></a>
+                                 </td>
+                                 <td style="width: 95%; padding: 0">
+                                    <h5 class="card-title" style="transform: rotate(0);">
+                                       <a href="" target="_blank" class="titlecourse"> {{ c.Job }}</a>
+                                    </h5>
+                                 </td>
+
+                              </tr>
+
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <br>
+            <br>
+            <!-- Modal for courses -->
+            <div class="modal fade" id="coursepopup" tabindex="-1" role="dialog" aria-labelledby="coursepopup" aria-hidden="true">
+               <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                     <!-- <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel">Course : Info {{ selected.course }}</h4> -->
+                     <!-- <input class="form-control field" type="search" placeholder="Search" aria-label="Search" ng-model="test"><span style="width: 10px"> </span>
+                        <button class="btn btn-outline-success " type="submit" data-toggle="modal" data-target="#coursepopup">Search</button> -->
+                     <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div> -->
+                     <!-- <input type="text" id="courseinput1" ng-model="courseclick"> -->
+                     <table style="margin: 10px;">
+                        <tr>
+                           <td style="transform: rotate(0);">
+                              <a href="{{ selected.url }}" target="_blank" class="titlecourse"><img ng-src="{{selected.icon}}" class="card-img icon" alt="..."></a>
+                           </td>
+                           <td style="width: 95%">
+                              <h5 class="card-title" style="transform: rotate(0);">
+                                 <a href="{{ selected.url }}" target="_blank" class="titlecourse">{{ selected.course + ": " + selected.courseName }}</a>
+                              </h5>
+                              <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                                 </button> -->
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2">
+                              <div style="font-size: 100%;"><span class="badge badge-pill badge-success">{{ selected.it }}</span><span class="badge badge-pill badge-info">{{ selected.is }}</span><span class="badge badge-pill badge-primary">{{ selected.tri }}</span><br><span class="badge badge-pill badge-danger" title="Prerequisites">{{ selected.Prerequisites }}</span></div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2">{{selected.description}}</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2">
+                              <hr>
+                              <h4>{{selected.tes}}</h4>
+                              <br>
+                              <b>{{selected.student}}</b> {{selected.status}}
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2">
+                              {{selected.p1}}
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2">
+                              <hr>
+                              <h4>Course Workload</h4>
+                              <br>
+                              <div class="progress" style="height: 20px;">
+                                 <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 25%" aria-valuenow="{{selected.lect}}" aria-valuemin="0" aria-valuemax="150">{{selected.lect}} hours lectures</div>
+                                 <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="{{selected.work}}" aria-valuemin="0" aria-valuemax="150">{{selected.work}} hours workshops</div>
+                                 <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="150">{{selected.tut}} hours tutorials</div>
+                                 <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: 40%" aria-valuenow="{{selected.prep}}" aria-valuemin="0" aria-valuemax="150">{{selected.prep}} hours preparation</div>
+                                 <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="150">{{selected.asses}} hours assessments</div>
+                              </div>
+                           </td>
+                        </tr>
+                     </table>
+                     <table style="margin: 10px;">
+                        <tr>
+                           <td colspan="2">
+                              <hr>
+                              <h4>Assessments</h4>
+                              <br>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><b>{{selected.ass1}}</b></td>
+                           <td>{{selected.mark1}}</td>
+                        </tr>
+                        <tr>
+                           <td><b>{{selected.ass2}}</b></td>
+                           <td>{{selected.mark2}}</td>
+                        </tr>
+                        <tr>
+                           <td><b>{{selected.ass3}}</b></td>
+                           <td>{{selected.mark3}}</td>
+                        </tr>
+                        <tr>
+                           <td><b>{{selected.ass4}}</b></td>
+                           <td>{{selected.mark4}}</td>
+                        </tr>
+                        <tr>
+                           <td><b>{{selected.ass5}}</b></td>
+                           <td>{{selected.mark5}}</td>
+                        </tr>
+                        <tr>
+                           <td><b>{{selected.ass6}}</b></td>
+                           <td>{{selected.mark6}}</td>
+                        </tr>
+                     </table>
+                     <table style="margin: 10px;">
+                        <tr>
+                           <hr>
+                           <td colspan="2">
+                              <h4>Course Stream(s)</h4>
+                              <br>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th>Trimester</th>
+                           <th>Lecture start times: </th>
+                        </tr>
+                        <tr>
+                           <td><b>{{selected.tri1}}</b></td>
+                           <td>{{selected.time1}}</td>
+                        </tr>
+                        <tr>
+                           <td><b>{{selected.tri2}}</b></td>
+                           <td>{{selected.time2}}</td>
+                        </tr>
+                        <tr>
+                           <td><b>{{selected.tri3}}</b></td>
+                           <td>{{selected.time3}}</td>
+                        </tr>
+                        <tr>
+                           <td><b>{{selected.tri4}}</b></td>
+                           <td>{{selected.time4}}</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2">
+                              <hr>
+                              <h4>Location: {{selected.loc}} </h4>
+                              <br>
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                 <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Piptea to Kelburn</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Te Aro to Kelburn</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Te Aro to Piptea</a>
+                                 </li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <div id="map2" style="width: 100%">
+                                       <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d5996.231447706811!2d174.76916957880843!3d-41.28458580498923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x6d38ae2c0bf7df21%3A0x4c2bfc64a41578be!2sRutherford%20House%20Bunny%20Street%2C%20Pipitea%2C%20Wellington!3m2!1d-41.2790335!2d174.778878!4m5!1s0x6d38b02952575dbb%3A0xadf3ba89622116f0!2sVictoria%20University%20of%20Wellington%2C%20Wellington!3m2!1d-41.2904017!2d174.76866149999998!5e0!3m2!1sen!2snz!4v1571478224789!5m2!1sen!2snz" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                 </div>
+                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div id="map2" style="width: 100%">
+                                       <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d5995.502120972582!2d174.76768952880937!3d-41.29252205596687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x6d38afd8f8caafa3%3A0xb62ac32a2a308cf7!2sVictoria%20University%20of%20Wellington%2C%20Faculty%20of%20Architecture%20and%20Design%20Vivian%20Street%2C%20Te%20Aro%2C%20Wellington!3m2!1d-41.295502!2d174.775614!4m5!1s0x6d38b02952575dbb%3A0xadf3ba89622116f0!2sVictoria%20University%20of%20Wellington%2C%20Wellington!3m2!1d-41.2904017!2d174.76866149999998!5e0!3m2!1sen!2snz!4v1571478846446!5m2!1sen!2snz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                 </div>
+                                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                    <div id="map2" style="width: 100%">
+                                       <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d11991.956481874702!2d174.76885654546493!3d-41.287341244821576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x6d38af90dd755c4b%3A0x16c35757f8c38a7d!2sVictoria%20University%20of%20Wellington%2C%20Architecture%20and%20Design%20Library%20Vivian%20Street%2C%20Te%20Aro%2C%20Wellington!3m2!1d-41.2955482!2d174.7756044!4m5!1s0x6d38ae2c0bf7df21%3A0x4c2bfc64a41578be!2sRutherford%20House%20Bunny%20Street%2C%20Pipitea%2C%20Wellington!3m2!1d-41.2790335!2d174.778878!5e0!3m2!1sen!2snz!4v1571478968659!5m2!1sen!2snz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                     </table>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Modal for jobs -->
+            <div class="modal fade" id="jobpopup" tabindex="-1" role="dialog" aria-labelledby="jobpopup" aria-hidden="true">
+               <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <a href="{{ selectedjob.url }}" target="_blank" class="titlecourse"><img ng-src="{{selectedjob.icon}}" class="card-img icon" alt="..."></a>
+                        <h4 class="modal-title" style="margin-top: 20px" id="exampleModalLabel"> {{ selectedjob.Job }}</h4>
+                        <!-- <input class="form-control field" type="search" placeholder="Search" aria-label="Search" ng-model="test"><span style="width: 10px"> </span>
+                           <button class="btn btn-outline-success " type="submit" data-toggle="modal" data-target="#coursepopup">Search</button> -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <!-- <input type="text" id="courseinput1" ng-model="courseclick"> -->
+                     <table style="margin: 10px;">
+                        <tr>
+                           <td colspan="2">
+                              <div style="font-size: 100%;"><span class="badge badge-pill badge-success">{{ selectedjob.pay }}</span><span class="badge badge-pill badge-info">{{ selectedjob.opportunities }}</span><span class="badge badge-pill badge-primary">{{ selected.tri }}</span><span class="badge badge-pill badge-danger" title="Prerequisites">{{ selected.Prerequisites }}</span></div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2">{{selectedjob.description}}</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2"><br><img src="{{selectedjob.image}}" class="img-fluid"></td>
+                        </tr>
+                     </table>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Modal for serach bar -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+               <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <input class="form-control field" type="search" placeholder="Search" aria-label="Search" ng-model="test"><span style="width: 10px"> </span>
+                        <button class="btn btn-outline-success " type="submit" data-toggle="modal" data-target="#exampleModalLong">Search</button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="modal-body">
+                        <div class="card mb-2" ng-repeat="y in courses | filter:test" id="jobscheck">
+                           <table>
+                              <tr>
+                                 <td rowspan="2" style="transform: rotate(0);">
+                                    <a href="{{ y.url }}" target="_blank" class="titlecourse stretched-link"><img ng-src="{{y.icon}}" class="card-img icon" alt="..."></a>
+                                 </td>
+                                 <td style="width: 95%">
+                                    <h5 class="card-title" style="transform: rotate(0);">
+                                       <a href="{{ y.url }}" target="_blank" class="titlecourse stretched-link">{{ y.course + ": " + y.courseName }}</a>
+                                    </h5>
+                                 </td>
+                              </tr>
+                              <td>
+                                 <div style="font-size: 80%;"><span class="badge badge-pill badge-success">{{ y.it }}</span><span class="badge badge-pill badge-info">{{ y.is}}</span><span class="badge badge-pill badge-primary">{{ y.tri }}</span><span class="badge badge-pill badge-danger" title="Prerequisites">{{ y.Prerequisites }}</span></div>
+                              </td>
+                              <tr>
+                              </tr>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- model serach bar -->
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalcourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+               <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <input class="form-control field" type="search" placeholder="Search" aria-label="Search" ng-model="test"><span style="width: 10px"> </span>
+                        <button class="btn btn-outline-success " type="submit" data-toggle="modal" data-target="#exampleModalLong">Search</button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                    
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Course Planner tool -->
+            <span class="anchor" id="Planner"></span>
+            <h1 class="text-green text-center">Course Planner:</h1>
+            <div class="courseplanner-section bg-light" >
+               <form id="regForm" action="">
+                  <br>
+                  <div class="tab">
+                     <div class="row2">
+                    
+                        <h4 class="text-secondary">Take Information Systems as a Major, Minor or Elective:</h4>
+                        <br>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons" id="infotype" style="width: 100%">
+                           <label class="btn btn-outline-success">
+                           <input type="radio" name="options" id="option1" autocomplete="off" checked value="Major"> Major
+                           </label>
+                           <label class="btn btn-outline-success">
+                           <input type="radio" name="options" id="option2" autocomplete="off" value="Minor"> Minor
+                           </label>
+                           <label class="btn btn-outline-success">
+                           <input type="radio" name="options" id="option3" autocomplete="off" value="Elective"> Elective
+                           </label>
+                           <!-- <label class="btn btn-outline-success">
+                              <input type="radio" name="options" id="option3" autocomplete="off" value="Not Sure"> Explore Career
+                              </label> -->
+                        </div>
+                        <br>
+                        <div id="specialisationdiv" style="display: none">
+                           <br>
+                           <h4 class="text-secondary">Type of Specialisation for Major:</h4>
+                           <br>
+                           <div class="btn-group btn-group-toggle" data-toggle="buttons" id="majortype" style="width: 100%">
+                              <label class="btn btn-outline-warning">
+                              <input type="radio" name="options" id="option1" autocomplete="off" checked value="Business Analysis"> Business Analysis
+                              </label>
+                              <label class="btn btn-outline-primary">
+                              <input type="radio" name="options" id="option2" autocomplete="off" value="IT Solutions"> IT Solutions
+                              </label>
+                              <label class="btn btn-outline-success">
+                              <input type="radio" name="options" id="option3" autocomplete="off" value="INFO Major"> INFO Major
+                              </label>
+                           </div>
+                        </div>
+                        <br>
+                        <div class="sticky" style="min-height: 50px; margin: 4px;">
+                           <nav class="shift" >
+                              <b>
+                                 <p id="p0" style="color: tomato"></p>
+                              </b>
+                           </nav>
+                           <p id="p1" style="color: #00A770"></p>
+                        </div>
+                        <!-- <b><p id="p0"></p></b> -->
+                        <hr>
+                        <div id="courseselect" style="display: none">
+                           <h3 class="text-secondary">What info papers have you taken?</h3>
+                           <p id="p1"></p>
+                           <p id="p2"></p>
+                           <br>
+                           <p>100 level</p>
+                           <!-- <div class="text-center"> -->
+                           <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 100}">
+                              <label class="btn btn-outline-{{y.bcolor}}">
+                              <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" name="sport" class="done"> INFO {{ y.course }}
+                              </label>
+                              <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                           </div>
+                           <!-- </div> -->
+                           <hr>
+                           <p>200 level</p>
+                           <!-- <div class="text-center"> -->
+                           <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 200}">
+                              <label class="btn btn-outline-{{y.bcolor}}">
+                              <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" name="sport" class="done"> INFO {{ y.course }}
+                              </label>
+                              <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                           </div>
+                           <!-- </div> -->
+                           <hr>
+                           <p>300 level</p>
+                           <!-- <div class="text-center"> -->
+                           <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 300, 'is' : '!' + 'BA Capstone'}">
+                              <label class="btn btn-outline-{{y.bcolor}}">
+                              <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" name="sport" class="done"> INFO {{ y.course }}
+                              </label>
+                              <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                           </div>
+                           <!-- </div> -->
+                           <hr>
+                           <p>300 Capstone level</p>
+                           <!-- <div class="text-center"> -->
+                           <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 300, 'is' : 'BA Capstone'}">
+                              <label class="btn btn-outline-{{y.bcolor}}">
+                              <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" name="sport" class="done"> INFO {{ y.course }}
+                              </label>
+                              <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                           </div>
+                           <!-- </div> -->
+                        </div>
+                        <br>
+                        <h5>Key:</h5>
+                        <P><span class="text-success"> | Valid courses for both BA and IT Specialisation | </span>
+                           <span class="text-warning"> | Valid courses for BA Specialisation | </span><br>
+                           <span class="text-primary"> | Valid courses for IT Specialisation | </span>
+                           <span class="text-secondary"> | Optional 300 level courses | </span>
+                        </P>
+                        <br><br>
+                        <p>
+                           <input id="page1" placeholder="page1" style="display: none" oninput="this.className = ''" >
+                        </p>
+                     </div>
+                  </div>
+                  <!-- Course planner - papers to do in 2020 -->
+                  <div class="tab">
+                     <h2 class="text-green text-center">Courses to take in 2020</h2>
+                     <!-- <br> -->
+                     <div class="sticky" style="min-height: 50px; margin: 4px;">
+                        <nav class="shift" >
+                           <b>
+                              <p id="s0" style="color: tomato"></p>
+                           </b>
+                        </nav>
+                        <p id=sp1" style="color: #00A770"></p>
+                     </div>
+                     <br>
+                     <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                           <a class="nav-link active" id="tri1-tab" data-toggle="tab" href="#home1" role="tab" aria-controls="home" aria-selected="true">Trimester 1</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" id="tri2-tab" data-toggle="tab" href="#profile2" role="tab" aria-controls="profile" aria-selected="false">Trimester 2</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" id="tri3-tab" data-toggle="tab" href="#contact3" role="tab" aria-controls="contact" aria-selected="false">Trimester 3</a>
+                        </li>
+                     </ul>
+                     <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="tri1-tab">
+                           <div id="info100">
+                              <br>
+                              <p>100 level</p>
+                              <!-- <div class="text-center"> -->
+                              <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 100, tri1: '1' }">
+                                 <label class="btn btn-outline-{{y.bcolor}}">
+                                 <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" name="sport" class="plan"> INFO {{ y.course }}
+                                 </label>
+                                 <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                              </div>
+                           </div>
+                           <!-- </div> -->
+                           <hr>
+                           <div id="info200">
+                              <p>200 level</p>
+                              <!-- <div class="text-center"> -->
+                              <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 200 , tri1: '1' }">
+                                 <label class="btn btn-outline-{{y.bcolor}}">
+                                 <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" class="plan"> INFO {{ y.course }}
+                                 </label>
+                                 <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                              </div>
+                              <!-- </div> -->
+                              <hr>
+                           </div>
+                           <div id="info300">
+                              <p>300 level</p>
+                              <!-- <div class="text-center"> -->
+                              <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 300,  tri1: '1',  'is' : '!' + 'BA Capstone'}">
+                                 <label class="btn btn-outline-{{y.bcolor}}">
+                                 <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" class="plan"> INFO {{ y.course }}
+                                 </label>
+                                 <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                              </div>
+                              <!-- </div> -->
+                              <hr>
+                           </div>
+                           <!-- <div id="infocap">
+                              <p>300 Capstone level</p>
+                              <div class="text-center">
+                              <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 300, tri1: '1',  'is' : 'BA Capstone'}">
+                                  <label class="btn btn-outline-{{y.bcolor}}">
+                                  <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" name="sport"> INFO {{ y.course }}
+                                  </label>
+                                  <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                              </div>
+                              </div> -->
+                        </div>
+                        <div class="tab-pane fade" id="profile2" role="tabpanel" aria-labelledby="tri2-tab">
+                           <div id="info100t2">
+                              <p>100 level</p>
+                              <!-- <div class="text-center"> -->
+                              <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 100, tri2: '2' }">
+                                 <label class="btn btn-outline-{{y.bcolor}}">
+                                 <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" class="plan2"> INFO {{ y.course }}
+                                 </label>
+                                 <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                              </div>
+                           </div>
+                           <!-- </div> -->
+                           <hr>
+                           <div id="info200t2">
+                              <p>200 level</p>
+                              <!-- <div class="text-center"> -->
+                              <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 200 , tri2: '2' }">
+                                 <label class="btn btn-outline-{{y.bcolor}}">
+                                 <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" class="plan2"> INFO {{ y.course }}
+                                 </label>
+                                 <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                              </div>
+                              <!-- </div> -->
+                              <hr>
+                           </div>
+                           <div id="info300t2">
+                              <p>300 level</p>
+                              <!-- <div class="text-center"> -->
+                              <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 300,  tri2: '2',  'is' : '!' + 'BA Capstone'}">
+                                 <label class="btn btn-outline-{{y.bcolor}}">
+                                 <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" class="plan2"> INFO {{ y.course }}
+                                 </label>
+                                 <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                              </div>
+                              <!-- </div> -->
+                              <hr>
+                           </div>
+                           <div id="infocap">
+                              <p>300 Capstone level</p>
+                              <!-- <div class="text-center"> -->
+                              <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 300, tri2: '2',  'is' : 'BA Capstone'}">
+                                 <label class="btn btn-outline-{{y.bcolor}}">
+                                 <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" class="plan2"> INFO {{ y.course }}
+                                 </label>
+                                 <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact3" role="tabpanel" aria-labelledby="tri3-tab">
+                           <div id="info100t3">
+                              <p>100 level</p>
+                              <!-- <div class="text-center"> -->
+                              <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 100, tri3: '3' }">
+                                 <label class="btn btn-outline-{{y.bcolor}}">
+                                 <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" class="plan3"> INFO {{ y.course }}
+                                 </label>
+                                 <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                              </div>
+                           </div>
+                           <!-- </div> -->
+                           <hr>
+                           <!-- <div id="info200">
+                              <p>200 level</p>
+                              <div class="text-center">
+                              <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 200 , tri3: '3' }">
+                                  <label class="btn btn-outline-{{y.bcolor}}">
+                                  <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" name="sport"> INFO {{ y.course }}
+                                  </label>
+                                  <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                              </div>
+                               </div>
+                              <hr>
+                              </div> -->
+                           <div id="info300t3">
+                              <p>300 level</p>
+                              <!-- <div class="text-center">  -->
+                              <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 300,  tri3: '3',  'is' : '!' + 'BA Capstone'}">
+                                 <label class="btn btn-outline-{{y.bcolor}}">
+                                 <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" class="plan3"> INFO {{ y.course }}
+                                 </label>
+                                 <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                                 <!-- </div> -->
+                              </div>
+                              <hr>
+                           </div>
+                           <!-- <div id="infocap">
+                              <p>300 Capstone level</p>
+                              <div class="text-center">
+                              <div class="btn-group btn-group-toggle btn-space" data-toggle="buttons" ng-repeat="y in courseshort | filter : {'level' : 300, tri3: '3',  'is' : 'BA Capstone'}">
+                                  <label class="btn btn-outline-{{y.bcolor}}">
+                                  <input type="checkbox" checked autocomplete="off" title="{{y.courseName}}" value="{{ y.course }}" name="sport"> INFO {{ y.course }}
+                                  </label>
+                                  <a class="btn btn-{{y.bcolor}}" ng-href="{{y.url}}" target="_blank" role="button" data-toggle="modal" data-target="#coursepopup" ng-click="setSelected(y)"><i class="fas fa-info-circle" style="color: white"></i></a>
+                              </div>
+                              </div> -->
+                        </div>
+                     </div>
+                     <br>
+                     <h5>Key:</h5>
+                     <P><span class="text-success"> | Valid courses for both BA and IT Specialisation | </span>
+                        <span class="text-warning"> | Valid courses for BA Specialisation | </span><br>
+                        <span class="text-primary"> | Valid courses for IT Specialisation | </span>
+                        <span class="text-secondary"> | Optional 300 level courses | </span>
+                     </P>
+                     <br>
+                     <h2 class="text-green text-center">2020 Course Timetable</h2>
+                     <!-- Table of paper that will be taken in 2020 for each tri -->
+                     <table style="width: 100%;">
+                        <tr>
+                           <th style="width: 200px;"></th>
+                           <th>Courses</th>
+                        </tr>
+                        <tr>
+                           <th>Trimester 1 - 2020</th>
+                           <td>
+                              <p id="trione2020"></p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th>Trimester 2 - 2020</th>
+                           <td>
+                              <p id="tritwo2020"></p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th>Trimester 3 - 2020</th>
+                           <td>
+                              <p id="trithree2020"></p>
+                           </td>
+                        </tr>
+                    </table>
+                  </div>
+                  <div style="overflow:auto;">
+                     <div style="float:right;">
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="btn btn-info">Previous</button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)" class="btn btn-success">Next</button>
+                     </div>
+                  </div>
+                  <!-- Circles which indicates the steps of the form: -->
+                  <div style="text-align:center;margin-top:40px;">
+                     <span class="step"></span>
+                     <span class="step"></span>
+                     <!-- <span class="step"></span>
+                        <span class="step"></span> -->
+                  </div>
+                </form>
+               <br>
+            </div>
+         </div>
+      </div>
+      <!-- FAQ section -->
+      <div class="containerWork">
+        <span class="anchor" id="FAQ"></span>
+         <h1 style="text-align: center" >FAQ</h1>
+         <div class="accordion" id="accordionExample">
+            <div class="card">
+               <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                     <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h4>INFO Major explanation</h4>
+                     </button>
+                  </h2>
+               </div>
+               <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                     <p>To obtain a BCom (INFO) you will need to complete courses worth a total of at least 360 points. In addition to the Bachelor of Commerce degree requirements set by the Faculty of Commerce, for a major in Information Systems you will need to complete:</p>
+                     <ol>
+                        <li>
+                           Three courses at 100 level
+                           <ol>
+                              <li>INFO 101- Introduction to Information Systems</li>
+                              <li>INFO 141 – Systems Analysis</li>
+                              <li>INFO 151 – Database</li>
+                           </ol>
+                        </li>
+                        <li>Three courses from INFO 200-299</li>
+                        <li>
+                           Three courses at 300 level
+                           <ol>
+                              <li>Capstone course; either INFO 320 – Project in Information Systems or INFO 395 Case Studies in Information Systems</li>
+                              <li>Two further courses from INFO 300-399</li>
+                           </ol>
+                        </li>
+                     </ol>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                     <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <h4>Minor explanation</h4>
+                     </button>
+                  </h2>
+               </div>
+               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                     <p>To obtain a BCom (INFO) you will need to complete courses worth a total of at least 360 points. In addition to the Bachelor of Commerce degree requirements set by the Faculty of Commerce, for a major in Information Systems you will need to complete:</p>
+                     <ol>
+                        <li>
+                           Three courses at 100 level
+                           <ol>
+                              <li>INFO 101- Introduction to Information Systems</li>
+                              <li>INFO 141 – Systems Analysis</li>
+                              <li>INFO 151 – Database</li>
+                           </ol>
+                        </li>
+                        <li>Three courses from INFO 200-299</li>
+                        <li>
+                           Three courses at 300 level
+                           <ol>
+                              <li>Capstone course; either INFO 320 – Project in Information Systems or INFO 395 Case Studies in Information Systems</li>
+                              <li>Two further courses from INFO 300-399</li>
+                           </ol>
+                        </li>
+                     </ol>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                     <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <h4>Specialisation Explanation</h4>
+                     </button>
+                  </h2>
+               </div>
+               <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                     <p>If you are majoring in Information Systems you have the option of also selecting a specialisation in IT Solutions or Business Analysis. Getting this specialisation will allow you to become an expert in a particular set of skills.</p>
+                     <img src="images/BA IS papers.PNG" class="img-fluid rounded mx-auto d-block" alt="Responsive image" style="max-width: 800px;">
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingfour">
+                  <h2 class="mb-0">
+                     <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                        <h4>IT Solution specialisation</h4>
+                     </button>
+                  </h2>
+               </div>
+               <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+                  <div class="card-body">
+                     <ol type="a">
+                        <li>Through this specialisation you will thrive in a digital business environment – putting together digital solutions that add value to users and organisations.</li>
+                        <li>Potential career opportunities include system analyst, IT architect, user experience designer, IT architect, user experience designer, application designer and many more.</li>
+                        <li>
+                           To obtain this specialisation you must include the following six courses in meeting the 200 and 300 level major requirements:
+                           <ol type="i">
+                              <li>INFO 226 – Application Development</li>
+                              <li>INFO 231 – Management of IT Projects</li>
+                              <li>INFO 246 – User Experience Design</li>
+                              <li>INFO 320 – Project in Information System</li>
+                              <li>
+                                 Two further courses from:
+                                 <ol type="1">
+                                    <li>INFO 354 – Digital Strategy</li>
+                                    <li>INFO 376 – Enterprise Architecture</li>
+                                    <li>INFO 377 – System Verification</li>
+                                    <li>INFO 386 – Information Technology Architecture</li>
+                                 </ol>
+                              </li>
+                           </ol>
+                        </li>
+                     </ol>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingfive">
+                  <h2 class="mb-0">
+                     <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                        <h4>Business Analysis specialisation</h4>
+                     </button>
+                  </h2>
+               </div>
+               <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+                  <div class="card-body">
+                     <ol type="a">
+                        <dd>
+                           <li>Through this specialisation you will learn how to develop skills in problem analysis and design thinking and become an innovative and insightful leader who can make digital future better.</li>
+                        </dd>
+                        <li>Potential career opportunities include enterprise architect, IT business analyst, security analysis, IT manager and many more.</li>
+                        <li>
+                           To obtain this specialisation you must include the following six courses in meeting the 200 and 300 level major requirements:
+                           <ol type="i">
+                              <li>INFO 231 – Management of IT Projects</li>
+                              <li>INFO 234 – Business Process Design</li>
+                              <li>INFO 264 – Business Analytics</li>
+                              <li>INFO 395 – Case Studies in Information Systems</li>
+                              <li>
+                                 Two further courses from:
+                                 <ol type="1">
+                                    <li>INFO 334 – Digital Business Innovation</li>
+                                    <li>INFO 354 – Digital Strategy</li>
+                                    <li>INFO 376 – Enterprise Architecture</li>
+                                    <li>INFO 388 – Enterprise Security</li>
+                                 </ol>
+                              </li>
+                           </ol>
+                        </li>
+                     </ol>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingsix">
+                  <h2 class="mb-0">
+                     <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                        <h4>What majors could you do with INFO</h4>
+                     </button>
+                  </h2>
+               </div>
+               <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
+                  <div class="card-body">
+                     <p>When completing a Bachelor of Commerce degree students can choose more than one major and minor. Popular majors and minors alongside INFO are:</p>
+                     <ul>
+                        <li>
+                           <h4>Management</h4>
+                           <ul>
+                              <li>Studying management alongside Information Systems gives students a broad knowledge of the skills required by managers in both the commercial and public sector, through industry relevant case studies and projects. Doing management and Information Systems will allow you to develop the strengths required for IT management roles in the future.</li>
+                           </ul>
+                        </li>
+                        <li>
+                           <h4>Human Resources</h4>
+                           <ul>
+                              <li>Studying marketing and information systems together will allow students to gain insight into how companies use branding, slogans and advertising to sell products. Doing this alongside information systems will give you a great understanding of what sort of technology companies use and what they could use in the future. Jobs you could go into include marketing analytics, product marketing, IT communication and software administration.</li>
+                           </ul>
+                        </li>
+                        <li>
+                           <h4>Management</h4>
+                           <ul>
+                              <li>Studying Human Resources and Information Systems together will allow students to apply their learning in both fields, particularly looking forward to the future of work as IT has an ever increasing influence on Human Resource management in terms of planning and management, recruitment, training and development and maintenance functions.</li>
+                           </ul>
+                        </li>
+                        <li>
+                           <h4>Accounting</h4>
+                           <ul>
+                              <li>Studying Accounting and Information Systems together will allow accountants to greater understand the systems and process they are using when doing their everyday work, and how they can make process changes through technology to make efficient and effective accounting decisions.</li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <br>
+         <h1>General FAQ</h1>
+         <div class="accordion" id="accordionExample1">
+            <div class="card">
+               <div class="card-header" id="headingOnefaq">
+                  <h2 class="mb-0">
+                     <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOnefaq" aria-expanded="true" aria-controls="collapseOnefaq">
+                        <h4>Overall Degree:</h4>
+                     </button>
+                  </h2>
+               </div>
+               <div id="collapseOnefaq" class="collapse show" aria-labelledby="headingOnefaq" data-parent="#accordionExample1">
+                  <div class="card-body">
+                     <p><b>How do I know if I am eligible to study at Victoria University?</b></p>
+                     <ul>
+                        <li>Admission is based on your previous qualifications and results. You’ll need to meet one of the admission types to gain entry to Victoria. For more information please refer to 
+                           <a href="https://www.victoria.ac.nz/study/apply-enrol/admissions" target="_blank">https://www.victoria.ac.nz/study/apply-enrol/admissions</a>
+                        </li>
+                     </ul>
+                     <br>
+                     <p><b>Where do I apply to study at Victoria University?</b></p>
+                     <ul>
+                        <li>Please refer to
+                           <a href="https://www.victoria.ac.nz/study/apply-enrol/steps" target="_blank">https://www.victoria.ac.nz/study/apply-enrol/steps</a>
+                        </li>
+                     </ul>
+                     <br>
+                     <p><b>Are there tools available to help me plan my degree?</b></p>
+                     <ul>
+                        <li>Please refer to
+                           <a href="https://www.victoria.ac.nz/study/course-planning/degrees-courses" target="_blank">https://www.victoria.ac.nz/study/course-planning/degrees-courses</a> and 
+                           <a href="https://www.victoria.ac.nz/students/study/mydegree" target="_blank">https://www.victoria.ac.nz/students/study/mydegree</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingTwofaq">
+                  <h2 class="mb-0">
+                     <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapseTwofaq" aria-expanded="false" aria-controls="collapseTwofaq">
+                        <h4>Bachelor of Commerce Degree</h4>
+                     </button>
+                  </h2>
+               </div>
+               <div id="collapseTwofaq" class="collapse" aria-labelledby="headingTwofaq" data-parent="#accordionExample1">
+                  <div class="card-body">
+                     <p><b>How many points do I need for a Commerce degree at Victoria University?</b></p>
+                     <ul>
+                        <li>For a Commerce Degree you need 360 points which is 3 years of full-time study</li>
+                        <li>Please refer to
+                           <a href="https://www.victoria.ac.nz/explore/degrees/commerce/overview" target="_blank">https://www.victoria.ac.nz/explore/degrees/commerce/overview</a>
+                        </li>
+                     </ul>
+                     <br>
+                     <p><B>What support is available for Victoria Business School students?</B></p>
+                     <ul>
+                        <li>Please refer to
+                           <a href="https://www.victoria.ac.nz/vbs/studenthelp" target="_blank">https://www.victoria.ac.nz/vbs/studenthelp</a>
+                           for the advice & support relating to enrolment, degree planning, credit transfer, examinations, graduation and general enquiries.
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingThreefaq">
+                  <h2 class="mb-0">
+                     <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapseThreefaq" aria-expanded="false" aria-controls="collapseThreefaq">
+                        <h4>School of Information Management</h4>
+                     </button>
+                  </h2>
+               </div>
+               <div id="collapseThreefaq" class="collapse" aria-labelledby="headingThreefaq" data-parent="#accordionExample1">
+                  <div class="card-body">
+                     <p><b>How do I contact the School of Information Management?</b></p>
+                     <ul>
+                        <li>Please email us at <a href="mailto:sim@vuw.ac.nz" target="_top">sim@vuw.ac.nz</a></li>
+                     </ul>
+                     <br>
+                     <p><b>Where is the School of Information Management located?</b></p>
+                     <ul>
+                        <li>Based at Pipitea Campus, on Level 4 of Rutherford House</li>
+                     </ul>
+                     <br>
+                     <p><b>The academic I am looking for is not in their office – do you know when they will be back?</b></p>
+                     <ul>
+                        <li>If you would like to meet with one of academic staff members, it is courtesy to make an appointment via email or telephone prior to turning up. The benefit of making an appointment provides you with a mutually convenient time to focus on your query.</li>
+                     </ul>
+                     <br>
+                     <p><b>Can you tell me my tutor's email address / contact details? I want to ask them a question.</b></p>
+                     <ul>
+                        <li>We are not able to provide the personal contact details of our tutors. If you require assistance and can't wait until your next lecture or tutorial session, please check your course outline for appropriate contacts.</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingfourfaq">
+                  <h2 class="mb-0">
+                     <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapsefourfaq" aria-expanded="false" aria-controls="collapsefourfaq">
+                        <h4>Support</h4>
+                     </button>
+                  </h2>
+               </div>
+               <div id="collapsefourfaq" class="collapse" aria-labelledby="headingfourfaq" data-parent="#accordionExample1">
+                  <div class="card-body">
+                     <p><b>What IT Support is available at Victoria University of Wellington</b></p>
+                     <ul>
+                        <li>Please refer to 
+                           <a href="https://www.victoria.ac.nz/its/student-services" target="_blank">https://www.victoria.ac.nz/its/student-services</a>
+                           for the IT Services available
+                        </li>
+                     </ul>
+                     <br>
+                     <p><b>Where can I access all the tools I need to study successfully?</b></p>
+                     <ul>
+                        <li>Please refer to <a href="https://www.victoria.ac.nz/students/tools" target="_blank">https://www.victoria.ac.nz/students/tools</a></li>
+                     </ul>
+                     <br>
+                     <p><b>When can I access Blackboard and how do I do that?</b></p>
+                     <ul>
+                        <li>Courses go ‘live’ on Blackboard at the beginning of each trimester. These dates can be located on your Confirmation of Study. Blackboard is accessed through the student tools portal, MyTools at 
+                           <a href="https://www.victoria.ac.nz/students/tools" target="_blank">https://www.victoria.ac.nz/students/tools</a> ITS helpline: 04-463 5050
+                        </li>
+                     </ul>
+                     <br>
+                     <p><b>Where do I purchase my books and readings?</b></p>
+                     <ul>
+                        <li>Books and course materials can be bought from Vicbooks, located in the Hub at the Kelburn Campus or at Pipitea Campus, Rutherford House. Orders can be made online at 
+                           <a href="www.vicbooks.co.nz" target="_blank">www.vicbooks.co.nz</a>
+                           or for enquiries phone 04-463 5511
+                        </li>
+                     </ul>
+                     <br>
+                     <p><b>What support is there for Maori and Pacific students?</b></p>
+                     <ul>
+                        <li>
+                           Pacific room
+                           <ul>
+                              <li>There is a Pacific room available for students to use.
+                           </ul>
+                        </li>
+                        </li>
+                        <li>
+                           Ako Pai Marae
+                           <ul>
+                              <li>Students are welcomed onto the marae at Ngā Mihi (campus students) or Residency (online students). After the pōwhiri (welcome), students are welcome to use the facilities when no other function is being held there. Peihana Ruhe is the Taurima for Ako Pai Marae. Phone: 04-463 9553 
+                                 or Email: <a href="mailto:peihana.ruhe@vuw.ac.nz" target="_top">peihana.ruhe@vuw.ac.nz</a>
+                           </ul>
+                        </li>
+                        </li>
+                        <li>
+                           Te Pūtahi Atawhai
+                           <ul>
+                              <li>This service is for Māori and Pacific students studying at Victoria University of Wellington. They provide both academic and non-academic help to students.
+                                 <a href="www.victoria.ac.nz/tpa/" target="_blank">www.victoria.ac.nz/tpa/</a> or phone 04-463 6974.
+                           </ul>
+                        </li>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingfivefaq">
+                  <h2 class="mb-0">
+                     <button class="btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapsefivefaq" aria-expanded="false" aria-controls="collapsefivefaq">
+                        <h4>Key Contacts</h4>
+                     </button>
+                  </h2>
+               </div>
+               <div id="collapsefivefaq" class="collapse" aria-labelledby="headingfivefaq" data-parent="#accordionExample1">
+                  <div class="card-body">
+                     <p><b>Student services and support</b></p>
+                     <ul>
+                        <li><a href="https://www.victoria.ac.nz/students/support" target="_blank">https://www.victoria.ac.nz/students/support</a></li>
+                     </ul>
+                     <br>
+                     <p><b>Student Learning Support Services</b></p>
+                     <ul>
+                        <li><a href="https://www.victoria.ac.nz/student-learning" target="_blank">https://www.victoria.ac.nz/student-learning</a></li>
+                        <li>04-463 5400</li>
+                     </ul>
+                     <br>
+                     <p><b>Disability Services</b></p>
+                     <ul>
+                        <li><a href="https://www.victoria.ac.nz/disability" target="_blank">https://www.victoria.ac.nz/disability</a></li>
+                        <li>04-463 6070</li>
+                     </ul>
+                     <br>
+                     <p><b>Financial Advice</b></p>
+                     <ul>
+                        <li><a href="https://www.victoria.ac.nz/students/money" target="_blank">https://www.victoria.ac.nz/students/money</a></li>
+                        <li>04-463 7474</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+      <!-- /////////////////////////////////////////////////////// MODEL (POP UP) BEFORE TAKING THE ASSESSMENT \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+      <br><br>
+      <!-- --------------------------------------------------- LANDING PAGE FOOTER ----------------------------------------------------- -->
+      <footer>
+         <br>
+         <div class="row">
+            <div class="col-sm12 col-md-8 col-lg-3">
+               <!-- COL 1 with VUW LOGO -->
+               <div class="text-center">
+                  <a href="https://www.victoria.ac.nz">
+                  <img src="images/logo-white-full.svg" class="Responsive cen" style="max-width: 200px;"></a>
+               </div>
+               <br>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-3">
+               <!-- COL 4 VUW Careers & Employment contacts -->
+               <!-- <h5 align="center" style="color: white">Useful contacts</h5><br> -->
+               <div class="hidefooter">
+                  <p align="center"><a href="callto:6444635103">+64 4 463-5103</a></p>
+               </div>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-3">
+               <p align="center"><a href="mailto:sim@vuw.ac.nz?Subject=Email%20from%20SIM%20website%20tool"
+                  target="_top">sim@vuw.ac.nz</a></p>
+            </div>
+         </div>
+      </footer>
+      <!-- /////////////////////////////////////////////////////// LANDING PAGE FOOTER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="js1.js"></script>
+      <script src='javascript.js'></script>
+   </body>
+</html>
